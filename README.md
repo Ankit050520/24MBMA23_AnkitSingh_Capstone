@@ -1,133 +1,165 @@
 # 24MBMA23_AnkitSingh_Capstone
-Capstone MBA project: agriculture trends, crop prices, market &amp; sentiment prediction using big data.
-Big Data Applications in Modern Agriculture
-Author: Ankit Singh (24MBMA23)
-Course: MBA - Big Data Analytics
-Institution: University of Hyderabad
-Project Type: Capstone
+Capstone MBA project: agriculture trends, crop prices, market and sentiment prediction using big data.
 
-Project Overview
-This project leverages Big Data Analytics to solve practical problems in Indian agriculture. Using PySpark and Databricks, the solution automates data ingestion, transformation, model training, and alert generation to deliver actionable insights for farmers and policymakers. The main objectives are:
+Here’s a polished, professional version of your **README.md** content for GitHub — formatted with proper Markdown structure, consistent headings, and clear readability:
 
-Analyze social media and digital data for real-time agricultural trends
+---
 
-Predict market prices, farmer sentiment, pest outbreaks, and demand
+# 🌾 Big Data Applications in Modern Agriculture
 
-Generate regional alerts and recommendations to inform decision-making
+**Author:** Ankit Singh (24MBMA23)
+**Course:** MBA - Big Data Analytics
+**Institution:** University of Hyderabad
+**Project Type:** Capstone
 
-Use Cases
-Pest and Disease Warning for Farmers:
-Detect spikes in pest-related keywords using text analysis on farmer posts.
-Output: Region-wise alerts for pest outbreaks and preventive actions.
+---
 
-Real-Time Crop Price Prediction:
-Forecast commodity prices by combining sentiment scores and engagement data.
-Output: Accurate, timely price estimates to guide selling decisions.
+## 📘 Project Overview
 
-Checking Farmers' Sentiments:
-Monitor and analyze farmers' emotions, opinions, and feedback to track satisfaction.
-Output: Sentiment indices used for policy and support planning.
+This project leverages **Big Data Analytics** to address real-world challenges in **Indian agriculture**.
+Using **PySpark** and **Databricks**, the system automates **data ingestion, transformation, model training**, and **alert generation** to deliver actionable insights for **farmers** and **policymakers**.
 
-Predicting Market Demand:
-Use ML clustering to classify regions/crops into demand categories.
-Output: Market demand clusters and trend forecasts for crop planning.
+### 🎯 Objectives
 
-Local Farming Alerts and Updates:
-Automate region-wise notifications for threats, pricing, and market recommendations.
-Output: Mobile alerts and dashboard insights for farmers and officials.
+* Analyze social media and digital data for real-time agricultural trends
+* Predict market prices, farmer sentiment, pest outbreaks, and demand
+* Generate regional alerts and recommendations for decision-making
 
-Dataset
-Source: Social media, agricultural forums, and survey data
+---
 
-Format: CSV (Structured, 3,000+ records for pilot)
+## 🚜 Use Cases
 
-Fields:
+### 1. Pest and Disease Warning for Farmers
 
-Region
+* **Goal:** Detect spikes in pest-related keywords from farmer posts.
+* **Output:** Region-wise alerts for pest outbreaks and preventive actions.
 
-Crop
+### 2. Real-Time Crop Price Prediction
 
-Emotion (sentiment)
+* **Goal:** Forecast commodity prices by combining sentiment and engagement data.
+* **Output:** Accurate, timely price estimates to guide farmers’ selling decisions.
 
-PostText
+### 3. Checking Farmers' Sentiments
 
-Date
+* **Goal:** Analyze farmers’ emotions, opinions, and satisfaction levels.
+* **Output:** Sentiment indices for policy-making and support planning.
 
-Price, DemandIndex
+### 4. Predicting Market Demand
 
-Temperature, Rainfall
+* **Goal:** Use ML clustering to classify crops/regions by demand category.
+* **Output:** Market demand clusters and trend forecasts for better crop planning.
 
-Implementation Methodology
-Platform: Databricks (PySpark notebooks/workflows)
+### 5. Local Farming Alerts and Updates
 
-Pipeline Steps:
+* **Goal:** Automate regional notifications for threats, pricing, and market info.
+* **Output:** Mobile alerts and dashboard insights for farmers and officials.
 
-Ingestion & Validation: Load and clean CSV, handle missing values
+---
 
-Transformation: Normalize fields, compute sentiment scores (positive/negative/neutral)
+## 📊 Dataset
 
-Feature Engineering: Create flags for pests, aggregate region-wise data, rolling metrics
+* **Source:** Social media, agricultural forums, and survey data
+* **Format:** CSV (Structured, ~3,000+ records for pilot)
 
-Model Training: Apply Random Forest for regression (price), K-Means for segmentation (demand)
+### Fields:
 
-Alert Generation: Trigger notifications based on thresholds (z-score, sentiment, demand)
+| Field                 | Description                 |
+| --------------------- | --------------------------- |
+| Region                | Geographic area             |
+| Crop                  | Crop name                   |
+| Emotion               | Sentiment score/category    |
+| PostText              | Farmer’s message or comment |
+| Date                  | Post or record timestamp    |
+| Price, DemandIndex    | Market-related fields       |
+| Temperature, Rainfall | Weather parameters          |
 
-Technologies Used:
+---
 
-PySpark, Spark MLlib
+## ⚙️ Implementation Methodology
 
-Databricks (or local Spark)
+### Platform:
 
-Python, Matplotlib, Seaborn (visualization)
+* **Databricks** (PySpark Notebooks/Workflows)
 
-Results & Output
-Pest and Disease Detection:
-Line chart shows spikes in pest mentions; dashboard triggers alerts for control measures
+### 🔁 Pipeline Steps:
 
-Price Prediction:
-Time series plots of predicted vs. actual prices; reliable estimation performance
+1. **Ingestion & Validation** – Load CSV, clean data, handle missing values
+2. **Transformation** – Normalize fields, compute sentiment (positive/negative/neutral)
+3. **Feature Engineering** – Create pest flags, aggregate regional data, rolling metrics
+4. **Model Training** –
 
-Sentiment Monitoring:
-Bar charts of region-wise farmer sentiment; identifies areas needing support
+   * *Random Forest Regression* → Crop price prediction
+   * *K-Means Clustering* → Demand segmentation
+5. **Alert Generation** – Trigger alerts based on thresholds (z-score, sentiment, demand)
 
-Market Demand Clusters:
-Scatterplot of demand categories; helps farmers and authorities plan crops
+### 🧰 Technologies Used
 
-Alert Recommendations:
-Table/dashboard with active alerts; suggested actions and updates
+* **PySpark**, **Spark MLlib**
+* **Databricks** (or local Spark setup)
+* **Python**, **Matplotlib**, **Seaborn** (for visualization)
 
-Discussion
-Positive sentiment trends precede market price rises; negative sentiment links to pest issues and demand drops
+---
 
-Automated alerts help farmers act earlier, increase yield, and reduce losses
+## 📈 Results & Outputs
 
-The end-to-end pipeline is scalable and easy to adapt for more data or regions
+| Use Case                 | Visualization    | Insight                                           |
+| ------------------------ | ---------------- | ------------------------------------------------- |
+| Pest & Disease Detection | Line chart       | Detects spikes in pest mentions; alerts generated |
+| Price Prediction         | Time-series plot | Predicts market prices accurately                 |
+| Sentiment Monitoring     | Bar chart        | Shows region-wise farmer sentiment                |
+| Market Demand Clusters   | Scatterplot      | Helps crop planning and policy                    |
+| Alert Recommendations    | Dashboard/Table  | Displays active alerts and suggested actions      |
 
-Limitations
-Dataset is static; real-time streaming (API integration) is a future step
+---
 
-Sentiment analysis currently English-only; needs for multi-language support
+## 💬 Discussion
 
-Models need retraining as data evolves for best accuracy
+* Positive farmer sentiment often precedes **market price rises**.
+* Negative sentiment correlates with **pest problems** and **demand drops**.
+* Automated alerts enable **early farmer response**, improving yield and reducing loss.
+* The end-to-end pipeline is **scalable** and adaptable for larger datasets or regions.
 
-Future Enhancements
-Integrate live social media feeds (Twitter/Facebook API)
+---
 
-Add dashboard for real-time visualization (Power BI, Streamlit)
+## ⚠️ Limitations
 
-Deploy as a REST API for government/NGO usage
+* Static dataset (no real-time streaming yet).
+* Sentiment analysis limited to **English text**.
+* Models require **periodic retraining** as data evolves.
 
-Incorporate IoT and weather station data for precision insights
+---
 
-How to Run
-Clone this repository
+## 🚀 Future Enhancements
 
-Import CSV dataset(s) into Databricks or your PySpark environment
+* Integrate **live social media APIs** (Twitter/Facebook).
+* Add **real-time dashboards** using Power BI or Streamlit.
+* Deploy as a **REST API** for government or NGO use.
+* Incorporate **IoT and weather station data** for higher precision.
 
-Run notebooks in sequence: ingestion → transformation → feature engineering → model training → alert generation
+---
 
-View results in output dashboards, charts, and tables
+## 🧩 How to Run
 
-License
-Academic and educational use only.
+1. **Clone this repository**
+
+   ```bash
+   git clone https://github.com/yourusername/BigData-Agriculture.git
+   cd BigData-Agriculture
+   ```
+2. **Import CSV dataset(s)** into Databricks or PySpark environment
+3. **Run notebooks in sequence:**
+
+   * `01_ingestion.ipynb`
+   * `02_transformation.ipynb`
+   * `03_feature_engineering.ipynb`
+   * `04_model_training.ipynb`
+   * `05_alert_generation.ipynb`
+4. **View results** in dashboards, charts, and output tables
+
+---
+
+## 📜 License
+
+**Academic and Educational Use Only**
+© 2025 Ankit Singh, University of Hyderabad
 
