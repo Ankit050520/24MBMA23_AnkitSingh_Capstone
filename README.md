@@ -1,10 +1,6 @@
 # 24MBMA23_AnkitSingh_Capstone
 Capstone MBA project: agriculture trends, crop prices, market and sentiment prediction using big data.
 
-Here’s a polished, professional version of your **README.md** content for GitHub — formatted with proper Markdown structure, consistent headings, and clear readability:
-
----
-
 # 🌾 Big Data Applications in Modern Agriculture
 
 **Author:** Ankit Singh (24MBMA23)
